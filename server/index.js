@@ -2,6 +2,9 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const fetch = require('node-fetch');
+const { getBasicInfo } = require('./parseJsonFunctions');
+
+
 const app = express();
 
 
@@ -21,7 +24,7 @@ app.post('/getProfile', (req, res) => {
         }
     }).then(response => response.json())
       .then(data => {
-            
+            res.send(getBasicInfo(data));
       })
     
 })

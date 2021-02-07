@@ -6,22 +6,11 @@ import {
   Route,
 } from "react-router-dom";
 
-import Landing from './Components/Landing/Landing';
-import Profile from './Components/Profile/Profile';
+import Main from './Components/Main/Main';
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/profile">
-          <Profile />
-        </Route>
-
-        <Route path="/">
-          <Landing />
-        </Route>
-      </Switch>
-    </Router>
+    <Main />
   );
 }
 
